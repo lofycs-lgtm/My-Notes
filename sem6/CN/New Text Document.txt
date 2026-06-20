@@ -1,0 +1,6 @@
+tcp variance:
+	reno ,coupound
+
+congesion control  - 9 
+
+arp, rarp,icmp,ijmp -3
