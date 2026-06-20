@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M</title>
+</head>
+
+<body>
+    <!-- <span id="demo">hi4</span> -->
+    <h2>JavaScript HTML Events</h2>
+    <h2 onmouseover="changeText(this)" onmouseout="changet(this)">Click on this text!</h2>
+    <script>
+        // ***************************************************************LAB_1*****************************************************************************************
+        // ***************************************************************LAB_1*****************************************************************************************
+        // "use strict";
+        // console.log("hi1");
+        // window.alert("hi3");
+        // document.write("hi2");
+        // document.getElementById("demo").innerHTML = 10;
+
+
+                                // @@@@@@ Variables decalred without let,var and const are always global @@@@@@  //
+
+        // var a = 20;
+        // var b = 30;
+        // var c = prompt("ENTER THE THIRD ELEMENT: "); //scan element from the website
+        // c = parseInt(c);
+        // document.write("<br>");                          // HIGHLIGHTED 
+        // var d = a + b + c;
+        // document.write(d);
+
+        // x = 3.14; //this will get the error with use strict
+
+
+        // var a = 10;
+        // document.write(a);
+        // document.write("<br>");
+        // {
+        //     var a = 20;
+        //     document.write(a);
+        //     document.write("<br>");
+        // }
+        // document.write(a);                  // a's value is changed to 20 now BCUZ OF "VAR" !!!
+        // document.write("<br>");             
+
+        // let op = "hi";
+        // document.write(op);
+        // document.write("<br>");
+        // {
+        //     let op = "hello";
+        //     document.write(op);
+        //     document.write("<br>");
+        // }
+        // document.write(op);                // string's value will remain same BCUZ OF "LET" !!!!
+
+
+
+        // NOTE :
+        // We can say var acts as GLOBAL VARIABLE and let acts as local VARIABLE
+
+
+
+
+        // var a = 10, b = 20, c;
+        // c = a + b;
+        // console.log(c);
+
+
+        // var f = "hi", g = "!", h;
+        // h = f + g;
+        // console.log(h);
+        // var x = 1+10+'3';
+        // var y = '5'+10+2;     //**** Imp//
+        // console.log(x);
+        // console.log(y);
+
+
+        //swap
+        // var a = 10, b = 20;
+        // var temp = a;
+        // a = b;
+        // b = temp;
+        // console.log(a);
+        // console.log(b);
+
+
+        //instanceof operator
+        // var a = ["hi", "g"];
+        // document.getElementById("demo").innerHTML = (a instanceof Array) + "<br>" + (a instanceof Number);
+
+
+        // const car = ["a","b"];
+        // car[0] = "c";
+        // car.push("d");
+        // document.write(car);
+
+
+
+
+
+
+        // ***************************************************************LAB_2*****************************************************************************************
+        // ***************************************************************LAB_2*****************************************************************************************
+
+        // 1st topic
+        // var a = prompt("ENTER THE FIRST ELEMENT: ");
+        // var b = prompt("ENTER THE SECOND ELEMENT: ");
+        // var c = prompt("ENTER THE THIRD ELEMENT: ");
+        // a = parseInt(a);
+        // b = parseInt(b);
+        // c = parseInt(c);
+        // if (a >= b && a >= c) {
+        //     document.write(a);
+        // } else if (b >= a && b >= c) {
+        //     document.write(b);
+        // } else if (c >= a && c >= b) {
+        //     document.write(c);
+        // }
+
+
+
+
+
+
+
+        // 2nd topic
+        // switch (new Date().getDay()) {
+        //     case 0:
+        //         day = "sun";
+        //         break;
+        //     case 1:
+        //         day = "mon";
+        //         break;
+        //     case 2:
+        //         day = "tue";
+        //         break;
+        //     case 3:
+        //         day = "wed";
+        //         break;
+        //     case 4:
+        //         day = "thu";
+        //         break;
+        //     case 5:
+        //         day = "fri";
+        //         break;
+        //     case 0:
+        //         day = "sat";
+        //         break;
+        // }
+        // document.write(day);
+
+
+        // 3rd topic
+        //loops : for,for in , for of
+        // let arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+        // for (let i = 0; i < arr.length; i++) {
+        //     document.write(arr[i]);
+        //     document.write(" ");
+        // }
+        // document.write("<br>");
+        // for (let i in arr) {
+        //     document.write(arr[i]);
+        //     document.write(" ");
+        // }
+        // document.write("<br>");
+        // for (let i of arr) {
+        //     document.write(i);
+        //     document.write(" ");
+        // }
+        // document.write("<br>");
+
+
+
+        // let s = "cesem3";
+        // for (let i in s) {
+        //     document.write(i);               // for 'in' : i will act as an index
+        //     document.write(" ");
+        // }
+        // document.write("<br>");
+        // for (let i in s) {
+        //     document.write(s[i]);
+        //     document.write(" ");
+        // }
+        // document.write("<br>");
+        // for (let i of s) {
+        //     document.write(i);
+        //     document.write(" ");
+        // }
+        // document.write("<br>");
+
+
+        // 4th topic
+        // var x = prompt("enter a num");
+        // x = parseInt(x);
+        // var ans = "nothing";
+        // if (x == 2) {
+        //     ans = "yes<br>";
+        // } else if (x % 2 == 0 || x == 1) {
+        //     ans = "no<br>";
+        // } else {
+        //     for (var i = 3; i <= x / 2; i += 2) {
+        //         if (x % i == 0) {
+        //             ans = "no<br>";
+        //             break;
+        //         }
+        //     }
+        // }
+        // if (ans == "nothing") {
+        //     ans = "yes<br>";
+        // } else {
+        //     ans = "no<br>";
+        // }
+        // document.write(ans);
+
+
+
+
+
+
+        // calculator
+        // var a = prompt("ENTER THE FIRST ELEMENT: ");
+        // var b = prompt("ENTER THE SECOND ELEMENT: ");
+        // var c = prompt("ENTER THE operator: ");
+        // a = parseInt(a);
+        // b = parseInt(b);
+        // var ans;
+        // switch (c) {
+        //     case '+':
+        //         ans = a + b;
+        //         break;
+        //     case '-':
+        //         ans = a - b;
+        //         break;
+        //     case '/':
+        //         ans = a / b;
+        //         break;
+        //     case '*':
+        //         ans = a * b;
+        //         break;
+        //     case '^':
+        //         ans = a ** b;
+        //         break;
+        //     case '%':
+        //         ans = a % b;
+        //         break;
+        // }
+        // document.write(ans);
+
+
+
+        //5th topic
+        // break, continue can be modified to break (or to continue) a specific loop that is called labeling of the loop
+        // outer: for (var i = 0; i < 3; i++) {
+        //     console.log("i=" + i);
+        //     for (var j = 0; j < 3; j++) {
+        //         if (i === j) {
+        //             continue outer;
+        //         }
+        //         console.log("j=" + j);
+        //     }
+        // }
+
+        //6th topic -- we can push the whole obj in the array
+        // var obj = { name: 'soham', roll: '100' };
+        // var arr = [];
+        // arr.push(obj);                      //IMPORTANT (HIGHLIGHTED)
+
+
+
+        // ****************************************************************LAB_3*****************************************************************************************
+        // ****************************************************************LAB_3*****************************************************************************************
+        // topic 1 functions in javascript
+        // function square(number) {
+        //     return number * number;
+        // }
+
+        // function fact(n1) {
+        //     if (n1 == 0 || n1 == 1) {
+        //         return 1;
+        //     }
+        //     return n1 * fact(n1 - 1);
+        // }
+
+        // const add = function (n1, n2) {
+        //     return n1 + n2;
+        // }
+
+        // let a, b;
+        // a = parseInt(prompt("enter a number: "));
+        // console.log(square(a));
+
+        // a = parseInt(prompt("enter a number: "));
+        // b = parseInt(prompt("enter a number: "));
+        // console.log(add(a, b));
+
+
+        // function bintodec(s, n) {
+        //     let ans = 0;
+        //     let pow = 1;
+        //     for (let i = n - 1; i >= 0; i--) { //1010
+        //         ans += pow * s[i];
+        //         pow *= 2;
+        //     }
+        //     return ans;
+        // }
+        // let n = prompt("enter len");
+        // n = parseInt(n);
+        // let s = prompt("enter num");
+        // console.log(bintodec(s, n));
+
+
+
+        // topic 2 ARROW FUNCTION
+        // let a = 10, b = 20;
+        // let add = (a, b) => { return a + b; };
+        // console.log(add(a, b));
+
+        // let say = () => console.log("HELLO");
+
+        // let age = 5;
+        // let voting = (age < 18) ?
+        //     () => console.log("NO") :
+        //     () => console.log("YES");
+        // voting();
+
+        // topic 3 $ sign
+        // let a = 3;
+        // console.log(`a is ${a*2}`);
+
+
+
+
+        // ***************************************************************LAB_4*****************************************************************************************
+        // ***************************************************************LAB_4*****************************************************************************************
+        // topic 1 function overloading
+        // function addnumber(...args) {
+        //     return args.reduce((total, num) => total + num);
+        // }
+
+        // console.log(addnumber(2, 3, 4))
+
+
+
+        // topic 2 array operation
+        // let arr = [1, 2, 3];
+        // let arr2 = [4, 5];
+        // arr2.push(6);
+        // arrA = arr.concat(arr2);
+        // console.log(arrA);
+
+
+        // let fruit1 = ['mango', 'tomato'];
+        // let fruit2 = ['carrot', 'onion'];
+        // fruit2.pop(); //ONION REMOVED
+        // fruit2.push("apple"); //APPLE ADDEA
+        // fruit2.shift(); //CARROT REMOVED                     (shift removes an element at index 0 and shift all remainings to left side)
+        // fruit2.unshift("banana"); //CARROT REMOVED          (Unshift adds 1 element t index 0)
+        // let remo = fruit2.splice(2,1); // remove 1 item from index 2 inclusively
+        // arrA = fruit1.concat(fruit2); //fruit1 , fruit2 are not changed
+        // console.log(arrA);
+        // console.log(arrA[arrA.length - 1]);
+        // arrA.forEach(
+        //     function (item, index, array) {
+        //         console.log(item, index, array);
+        //     }
+        // );
+        // console.log(fruit1.indexOf('mango')); //FIND INDEX OF THE ARRAY          // ****HIGHLIGHTED ***
+
+
+
+        // topic 3 object
+        // var car = { color: 'white', company: 'BMW' };
+        // console.log(Object.keys(car));
+
+
+        //topic 4 constructor
+        // function person(name, age) {
+        //     this.name = name,
+        //     this.age = function () { return age; }
+        // }
+        // let abc = new person('AP', 40);
+        // abc.gender = 'm';
+        // console.log(abc.age());
+        // console.log(abc);
+        // console.log(Object.keys(abc));
+
+
+        // topic 5 dynamic  literal
+        // let greet = "nikal";
+        // let name = `unknown tu ${greet}`;
+        // document.write(name);
+
+
+
+        // function transform(static,...tags){
+        //     console.log(static);
+        //     console.log(tags);
+        // }
+
+        // transform `unknown tu ${greet}`;
+
+
+
+        // ***************************************************************LAB_5*****************************************************************************************
+        // ***************************************************************LAB_5*****************************************************************************************
+        // topic 1 destructing assignment
+        // let arr = [1, 2, 3, 4];
+        // console.log(arr);
+
+        // var x, y;
+        // [x, y] = [10, 20];
+
+
+        // let [a, b, c, d = 9, e = 5] = arr;
+        // document.write(a);
+
+        //swap two number
+        // function swap(s) {
+        //     [s[1], s[0]] = [s[0], s[1]];
+        // }
+        // const s = [1, 2];
+        // swap(s);
+        // document.write(s);
+
+
+        // let student = {
+        //     name: 'meet',
+        //     std: 12
+        // }
+
+        // const { i1, i2 } = student;
+        // console.log(i1);
+        // console.log(i2);
+
+        // let o = { p: 45 };
+        // let { p: fs };
+        // console.log(fs);
+
+
+        // const user = {
+        //     id: 42,
+        //     displayname: 'h',
+        //     fullname: {
+        //         fn: 'f',
+        //         ln: 'l'
+        //     }
+        // };
+
+        // function userid({ id }) {
+        //     return id;
+        // }
+
+        // function whois({ displayname, fullname: { fn: nm } }) {
+        //     return `${displayname} is ${nm}`;
+        // }
+        // console.log(userid(user));
+        // console.log(whois(user));
+
+
+        //topic 2 scoping
+        // function outerfunc() {
+        //     let outervar = 'I am outside';
+        //     function innerfunc() {
+        //         console.log(outervar);
+        //     }
+        //     innerfunc();
+        // }
+        // outerfunc();
+
+
+        // topic 3 closure
+        // function outerfunc() {
+        //     let outervar = 'I am outside';
+        //     function innerfunc() {
+        //         console.log(outervar);
+        //     }
+        //     return innerfunc;
+        // }
+        // const myinner = outerfunc();
+        // myinner();
+        // ***************************************************************LAB_6*****************************************************************************************
+        // ***************************************************************LAB_6*****************************************************************************************
+        //all topics : callback, curryying function, anonymous function 
+        // link : https://www.w3schools.com/js/js_htmldom.asp
+        // topic : anonymous and currying function (both)
+        // function sum(a) {
+        //     return function (b) {
+        //         return function (c) {
+        //             return function (d) {
+        //                 return a + b + c + d;
+        //             };
+        //         };
+        //     };
+        // }
+        // console.log(sum(1)(2)(3)(1));
+
+        // ***************************************************************LAB_7*****************************************************************************************
+        // ***************************************************************LAB_7*****************************************************************************************
+        // topic : event bubbling, event capturing
+        // links: 
+        // https://www.w3schools.com/js/js_htmldom_events.asp
+        // https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+        
+        function changeText(id) {
+            id.innerHTML = "Ooops!";
+        }
+        function changet(id) {
+            id.innerHTML = "Click on this text!";
+        }
+    </script>
+
+    <noscript>
+        please enable javascript
+    </noscript>
+</body>
+
+</html>
+
+<!--
+var
+can redeclare and change the value
+don't care about block scope
+
+let
+can not redeclare it but can change the value
+care about block scope
+
+const
+can not redeclare or can not change the values
+(in object it allows to change the particular elements value
+allows to add element in array)
+
+number
+string
+undefined
+object (null is object)
+-->
